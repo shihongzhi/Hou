@@ -72,6 +72,7 @@ exports.Core = (function(){
             
     },
     fetchHtml: function(req,res){
+      console.log("fetchHtml:" + req.body.unmd);
       var unmd = req.body.unmd
         , json_response = 
         {
@@ -80,39 +81,6 @@ exports.Core = (function(){
         }
 
       var html = _getHtml(req.body.unmd)  
-
-      var oauthkey = {
-          "consumer_key" : "3c4f46612f284e8b81d505ad83ce7630",
-          "consumer_secret" : "edbcf9d615a42f9a03a7d5b71afa511f",
-          "token" : "84c94a2e874cd4abbbfc75d3f0a7f13b",
-          "token_secret": "73c4b731d8b54f326253e10f819b4a6b"
-      };
-      //console.log(html)
-      var r = request.post({
-          "url" : 'http://note.youdao.com/yws/open/note/create.json',
-          "oauth" : oauthkey,
-          "headers" : {
-              "content-type" : "multipart/form-data",
-          },
-          multipart: [
-              {
-                  "Content-Disposition" : 'form-data; name="content";',
-                  "Content-type": "text/plain",
-                  //"Content-length": 500,
-                  body: html
-              },
-              {
-                  "Content-Disposition" : 'form-data; name="title";',
-                  "Content-type": "text/plain",
-                  //"Content-length": 500,
-                  body: "shihongzhi"
-              }
-          ]
-      },
-      function(error, response, body) {
-          console.log("Error: ", error);
-          console.log("Body: ", body);
-      });
 
       var name = _generateRandomMdFilename('html') 
 

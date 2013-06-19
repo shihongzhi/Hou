@@ -1,23 +1,17 @@
 {
-  "name": "Dillinger",
-  "description": "Dillinger, the last Markdown editor you'll ever need, by your's truly, Joe McCann.",
-  "version": "0.3.9-4",
+  "name": "Hou",
+  "description": "an online Markdown editor for ynote",
+  "version": "0.0.1",
   "author": {
-    "name": "Joe McCann",
-    "email": "joe@subprint.com"
+    "name": "shihongzhi",
+    "email": "shi65881583@gmail.com"
   },
-  "contributors": [
-    {
-      "name": "Joe McCann",
-      "email": "joe@subprint.com"
-    }
-  ],
   "scripts": {
     "start": "node app.js",
     "predeploy": "node build.js"
   },
   "keywords": [
-    "dillinger",
+    "Hou",
     "markdown",
     "editor",
     "ide",
@@ -41,7 +35,8 @@
     "colors": ">=0.6.0-1",
     "node-markdown": ">=0.1.0",
     "lodash": ">=0.6.1",
-    "dbox": "0.6.3"
+    "dbox": "0.6.3",
+    "ynote": ">=0.0.4"
   },
   "devDependencies": {
     "smoosh": ">=0.3.2",

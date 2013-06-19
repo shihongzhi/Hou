@@ -1,0 +1,15 @@
+<% if(isYnoteAuth) {
+ var copy = '注销'
+ var href = '/unlink/ynote'
+}else{
+  var copy = '登录'
+  var href = '/redirect/ynote'
+}
+%>
+<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">有道云笔记 <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+  <li><a tabindex="-1" href="<%- href %>"><%- copy %></a></li>
+  <% if(isYnoteAuth) { %>
+  <li><a tabindex="-1" href="#" id="save_ynote">保存到有道云笔记</a></li>
+  <% } %>
+</ul>

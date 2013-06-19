@@ -1,70 +1,24 @@
-Dillinger
-=========
+#Hou
 
-Dillinger is a cloud-enabled HTML5 Markdown editor.
+Hou是一个实时编辑渲染的markdown编辑器，并且支持将渲染的makrdown格式的笔记 保存到有道云笔记中的*来自Hou*笔记本中。
 
-  - Type some Markdown text in the left window
-  - See the HTML in the right
-  - Magic
+首先通过点击右上角的有道云笔记*登录*按钮对*Hou*进行授权， 然后点击*保存到有道云笔记*即可讲你写的markdown笔记保存到有道云笔记了！
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site] [1]:
+Enjoy it!
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable 
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
+###Markdown教程
 
-This text your see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.  
+[链接](http://wowubuntu.com/markdown/)
 
-Version
--
+###开发过程
 
-2.0
+基于开源库[dillinger.js](https://github.com/joemccann/dillinger) 和 [node-ynote](https://github.com/shihongzhi/node-ynote)
 
-Tech
------------
+    你面对着巨人，而终将也会成为巨人
 
-Dillinger uses a number of open source projects to work properly:
+###ToDo
 
-* [Ace Editor] - awesome web-based text editor
-* [Showdown] - a port of Markdown to JavaScript
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
-* [keymaster.js] - awesome keyboard handler lib by [@thomasfuchs]
-* [jQuery] - duh 
-
-Installation
---------------
-
-```sh
-git clone [git-repo-url] dillinger
-cd dillinger
-npm i -d
-mkdir -p public/files/{md,html}
-node app
-```
-
-
-License
--
-
-MIT
-
-*Free Software, Fuck Yeah!*
-
-  [john gruber]: http://daringfireball.net/
-  [@thomasfuchs]: http://twitter.com/thomasfuchs
-  [1]: http://daringfireball.net/projects/markdown/
-  [showdown]: https://github.com/coreyti/showdown
-  [ace editor]: http://ace.ajax.org
-  [node.js]: http://nodejs.org
-  [Twitter Bootstrap]: http://twitter.github.com/bootstrap/
-  [keymaster.js]: https://github.com/madrobby/keymaster
-  [jQuery]: http://jquery.com  
-  [@tjholowaychuk]: http://twitter.com/tjholowaychuk
-  [express]: http://expressjs.com
-  
+1. 保存图片
+2. 支持对已保存的markdown笔记重编辑
+3. 动态定位滚动条
+4. 协同编辑

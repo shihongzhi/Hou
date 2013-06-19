@@ -560,6 +560,31 @@ $(function(){
     
   }
 
+  function createYnoteFile(){
+    var unmd = editor.getSession().getValue()
+
+    function _doneHandler(jqXHR, data, response){
+      alert("保存成功 :)")
+    }
+
+    function _failHandler(){
+      alert("保存出问题了 :(")
+    }
+
+    var postdata = "unmd=" + encodeURIComponent(unmd) + "&title=" + encodeURIComponent(getCurrentFilenameFromField()); 
+
+    var config = {
+                      type: 'POST',
+                      data: postdata,
+                      dataType: 'json',
+                      url: '/factory/save_ynote',
+                      error: _failHandler,
+                      success: _doneHandler
+                    }
+
+    $.ajax(config)
+  }
+
   function showHtml(){
     
     // TODO: UPDATE TO SUPPORT FILENAME NOT JUST A RANDOM FILENAME
@@ -802,6 +827,13 @@ $(function(){
       on('click', function(){
         window.open("https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet", "_blank")
         return false
+      })
+
+    $('#save_ynote').
+      on('click', function(){
+        createYnoteFile()
+        $('.dropdown').removeClass('open')
+        return false;
       })
 
   } // end bindNav()
